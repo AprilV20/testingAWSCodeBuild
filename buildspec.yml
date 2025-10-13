@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "--- Install Phase ---"
+      - echo "No dependencies to install for this simple test."
+
+  build:
+    commands:
+      - echo "--- Build Phase ---"
+      - echo "This is my first CodeBuild project running!"
+      - ls -la
+
+  post_build:
+    commands:
+      - echo "--- Post-Build Phase ---"
+      - echo "The build is complete!"
