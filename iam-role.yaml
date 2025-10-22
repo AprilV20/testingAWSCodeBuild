@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <title>AWS Developer Tools</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+<style>html { background-color: #f2f3f3; }</style>
+<meta name="awsc-session-data" content='{&#34;infrastructureRegion&#34;:&#34;us-east-1&#34;,&#34;accountId&#34;:&#34;191880150292&#34;,&#34;accountAlias&#34;:&#34;191880150292&#34;,&#34;displayName&#34;:&#34;assumed-role%2FAdmin%2Faprilvi-Isengard&#34;,&#34;sessionARN&#34;:&#34;arn:aws:sts::191880150292:assumed-role/Admin/aprilvi-Isengard&#34;,&#34;sessionId&#34;:&#34;P1zxKdHKuADm8_d4qLQTfFYiomS6GOx1&#34;,&#34;identityToken&#34;:&#34;eyJ0eXAiOiJKV1MiLCJrZXlSZWdpb24iOiJ1cy1lYXN0LTEiLCJhbGciOiJFUzM4NCIsImtpZCI6IjQ1YzkxMTJjLTEwZDMtNDk5NS04NzI2LWQ5ZWQ3ODA0MjYzNSJ9.eyJzdWIiOiIxOTE4ODAxNTAyOTIiLCJzaWduaW5UeXBlIjoiUFVCTElDIiwiaXNzIjoiaHR0cHM6XC9cL2lzZW5nYXJkLmFtYXpvbi5jb20iLCJrZXliYXNlIjoiMVh0bHVFcjR3SVVOSVpMSHh1TUdGdTJBVUxqRXdMYzQzUzFMaHpKRzBnST0iLCJhcm4iOiJhcm46YXdzOnN0czo6MTkxODgwMTUwMjkyOmFzc3VtZWQtcm9sZVwvQWRtaW5cL2FwcmlsdmktSXNlbmdhcmQiLCJ1c2VybmFtZSI6ImFzc3VtZWQtcm9sZSUyRkFkbWluJTJGYXByaWx2aS1Jc2VuZ2FyZCJ9.mL79HeN5PPOog6qblVnT4sVGz37EWthr27Dnrwk8hozJavRY3e6oGrxHNTUmYdLq4CcPVD8QtRCUuLPSKFEEWbcEhVz9S3blfErK93eddZk1QdAZGtOcLn4qv3lkIG6j&#34;}' />
+<meta name="awsc-mezz" content="1">
+<meta id="awsc-mezz-region" name="awsc-mezz-region" content="us-east-1">
+<meta id="awsc-mezz-locale" name="awsc-mezz-locale" content="en">
+
+<meta name="awsc-console-supported-locales" content='{"consoleLanguages":[{"localeId":"en","supported":true,"localeDisplayName":"English (US)"},{"localeId":"en_GB","supported":false,"localeDisplayName":"English (UK)"},{"localeId":"id","supported":false,"localeDisplayName":"Bahasa Indonesia"},{"localeId":"de","supported":true,"localeDisplayName":"Deutsch"},{"localeId":"es","supported":true,"localeDisplayName":"Español"},{"localeId":"fr","supported":true,"localeDisplayName":"Français"},{"localeId":"ja","supported":true,"localeDisplayName":"日本語"},{"localeId":"it","supported":true,"localeDisplayName":"Italiano"},{"localeId":"pt_BR","supported":true,"localeDisplayName":"Português"},{"localeId":"ko","supported":true,"localeDisplayName":"한국어"},{"localeId":"zh_CN","supported":true,"localeDisplayName":"中文(简体)"},{"localeId":"zh_TW","supported":true,"localeDisplayName":"中文(繁體)"},{"localeId":"tr_TR","supported":false,"localeDisplayName":"Turkish (Turkey)"}]}'/>
+<meta id="awsc-mezz-fb" name="awsc-mezz-fb" content="0">
+<meta id="awsc-proxy-request-id" name="awsc-proxy-request-id" content="1ecb84a3a2db910a825fc94d5d4d1045">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="icon-domain" content='https://d2q66yyjeovezo.cloudfront.net'/><style type="text/css">
+#awsgnav #nav-logo,
+#awsgnav .nav-menu-arrow,
+#awsgnav .service-icon,
+#awsgnav .nav-selected-category-arrow,
+#awsgnav .nav-menu-content-close-arrow,
+#awsgnav .service-drag-handle,
+#awsgnav #awsc-rg-loading,
+#awsgnav #awsc-rg-error:before,
+.awsc-footer-icon,
+.awsc-service-icon /* .awsc-service-icon to be used by Console Home */
+{
+    background-image: url('https://d34xub3ut0ooib.cloudfront.net/img/icon-sprite-745950b374bf9b34a4f7528309dd162b.png');
+    background-repeat: no-repeat;
+}</style>
+
+<meta id="awsc-signin-endpoint" name="awsc-signin-endpoint" content="signin.aws.amazon.com">
+
+<meta id="awsc-widget-next" name="awsc-widget-next" content="1">
+
+
+<script data-platform-asset="global-nav-head" src="https://a.b.cdn.console.awsstatic.com/a/v1/HF5PICVVJCA7PX7EJVUFWUDTTZN22RXKKOAQ6OU5OH3YVCGTFCGQ/awsc-head.js"></script>
+<script data-unified-console-app-loader data-platform-asset="unified-console" type="module" async="async" crossorigin="anonymous" src="https://a.b.cdn.console.awsstatic.com/a/v1/F4MLTBBL2XYCLM75CXRLEAB4HOUEGDMZBV4PAX47RGFLAWP4CT5Q/index.js"></script>
+<link data-platform-asset="global-nav-css" rel="stylesheet" href="https://a.b.cdn.console.awsstatic.com/a/v1/6BPGQZC4PVQOYUXDINEXGJ4XKGY2G56QBL46P5LQVOCXAZTWKBIQ/dist/polaris-global-css.css?version=*"></link>
+
+
+
+<meta name="awsc-lang" content="en">
+<meta name="gwt:property" content="locale=en">
+
+
+
+
+    <meta name="awsc-csrf-token" content="%5B%7B%22token%22%3A%2243f8ca41017a1786252589193bf5cb26d40f39868cbeb7ab4e70e1d09251c4e5%22%2C%22version%22%3A%22hash-v3%22%7D%2C%7B%22token%22%3A%227c36a1849e8fc871fb74d33ee2306acee43235ccf2c7066d267810c78b30e56f%22%2C%22version%22%3A%22hash-v2%22%7D%5D">
+
+
+
+
+
+  <meta name="awsc-request-id" content="6a5ad129-f3ab-418f-9110-86528f893717">
+
+
+
+<meta id="meta-features-json" name="features-json" data-featuresjson='[{"externalId":"7aa887","enabled":false},{"externalId":"a267d7","enabled":true},{"externalId":"f15dec","enabled":true},{"externalId":"4ab78f","enabled":true},{"externalId":"4586c6","enabled":true},{"externalId":"020e66","enabled":true},{"externalId":"5d4da6","enabled":false},{"externalId":"91fwSj","enabled":false},{"externalId":"cc6e4f","enabled":false},{"externalId":"c1abfe","enabled":true},{"externalId":"q29kzu","enabled":true},{"externalId":"33469e","enabled":true},{"externalId":"ah8jr9","enabled":false},{"externalId":"d3kf00","enabled":true},{"externalId":"db7f98","enabled":true},{"externalId":"11350c","enabled":false},{"externalId":"117200","enabled":true},{"externalId":"e79d8d","enabled":true},{"externalId":"3e0877","enabled":true},{"externalId":"eu8769","enabled":false},{"externalId":"91a96b","enabled":true},{"externalId":"a3f5y4","enabled":true},{"externalId":"e6aa90","enabled":false},{"externalId":"tev321","enabled":false},{"externalId":"ab5cc4","enabled":true},{"externalId":"4ce3af","enabled":true},{"externalId":"32x7p3","enabled":false},{"externalId":"bf635f","enabled":false},{"externalId":"C224FD","enabled":true},{"externalId":"fb127d","enabled":true},{"externalId":"mnb736","enabled":true},{"externalId":"3c307b","enabled":true},{"externalId":"es5f0a","enabled":true},{"externalId":"b817d7","enabled":true},{"externalId":"d1e7a2","enabled":true},{"externalId":"4f73f7","enabled":true},{"externalId":"88b6e1","enabled":true},{"externalId":"817a6f","enabled":true},{"externalId":"def123","enabled":false},{"externalId":"259904","enabled":true},{"externalId":"9saf0f","enabled":true},{"externalId":"hjOvx0","enabled":false},{"externalId":"33d9fb","enabled":true},{"externalId":"js87gh","enabled":false},{"externalId":"f8j3f8","enabled":false},{"externalId":"813825","enabled":true},{"externalId":"wbh986","enabled":true},{"externalId":"2er33t","enabled":true},{"externalId":"jfh856","enabled":true},{"externalId":"ghahi0","enabled":false},{"externalId":"757d6e","enabled":true},{"externalId":"2dd968","enabled":true},{"externalId":"8qua8h","enabled":true},{"externalId":"835613","enabled":true},{"externalId":"c606rl","enabled":false},{"externalId":"1k4n23","enabled":true},{"externalId":"832cbp","enabled":true},{"externalId":"4bbcd6","enabled":true},{"externalId":"a8dfaa","enabled":true},{"externalId":"28e33b","enabled":false},{"externalId":"c90eb4","enabled":true},{"externalId":"0ae690","enabled":true},{"externalId":"0642e0","enabled":true},{"externalId":"d5ed82","enabled":false},{"externalId":"816d17","enabled":true},{"externalId":"b25b4e","enabled":true},{"externalId":"g00gl3","enabled":true},{"externalId":"hv83Q1","enabled":true},{"externalId":"261d15","enabled":true},{"externalId":"bd90a1","enabled":true},{"externalId":"024134","enabled":true},{"externalId":"887889","enabled":true},{"externalId":"701aab","enabled":true},{"externalId":"8o0b5","enabled":true},{"externalId":"lg25Fo","enabled":false},{"externalId":"824kob","enabled":true},{"externalId":"3df002","enabled":true},{"externalId":"j1awxk","enabled":true},{"externalId":"1bf104","enabled":false},{"externalId":"05db6a","enabled":false},{"externalId":"204c1c","enabled":true},{"externalId":"9f8963","enabled":true},{"externalId":"234543","enabled":true},{"externalId":"b5ace9","enabled":true},{"externalId":"6b59f6","enabled":true},{"externalId":"732851","enabled":true},{"externalId":"ddf255","enabled":false},{"externalId":"786074","enabled":true},{"externalId":"85da0d","enabled":true},{"externalId":"01a15e","enabled":true},{"externalId":"u21hbg","enabled":true},{"externalId":"weev08","enabled":true},{"externalId":"204903","enabled":false},{"externalId":"608680","enabled":true},{"externalId":"panl0g","enabled":true},{"externalId":"1bkhlw","enabled":true},{"externalId":"851gh2","enabled":true},{"externalId":"43898d","enabled":true},{"externalId":"b2cd0e","enabled":true},{"externalId":"kjh435","enabled":false},{"externalId":"6f9644","enabled":true},{"externalId":"be0f61","enabled":true},{"externalId":"6jrwe3","enabled":false},{"externalId":"Q29kZU","enabled":false},{"externalId":"a2c13c","enabled":true},{"externalId":"f36e6g","enabled":true},{"externalId":"0x18kd","enabled":true},{"externalId":"1n349x","enabled":true},{"externalId":"2150ad","enabled":true},{"externalId":"01fb4c","enabled":true},{"externalId":"hh2333","enabled":false},{"externalId":"dc4154","enabled":false},{"externalId":"987beu","enabled":false},{"externalId":"a2754","enabled":false},{"externalId":"7bf58c","enabled":false},{"externalId":"cb9946","enabled":true},{"externalId":"35d377","enabled":true},{"externalId":"e8fc63","enabled":true},{"externalId":"eaa0ae","enabled":false},{"externalId":"790df2","enabled":true},{"externalId":"73ffd8","enabled":true},{"externalId":"8e27b2","enabled":true},{"externalId":"3a2145","enabled":true},{"externalId":"72e517","enabled":true},{"externalId":"p3rr1n","enabled":true},{"externalId":"a0f133","enabled":true},{"externalId":"005d91","enabled":true},{"externalId":"977c20","enabled":true},{"externalId":"831b6a","enabled":true},{"externalId":"849c42","enabled":true},{"externalId":"960cde","enabled":false},{"externalId":"a7c25c","enabled":true},{"externalId":"47e704","enabled":true},{"externalId":"32faae","enabled":false},{"externalId":"dfc2e6","enabled":true},{"externalId":"6da512","enabled":true},{"externalId":"5996fc","enabled":true},{"externalId":"bfe356","enabled":true},{"externalId":"7731ad","enabled":true},{"externalId":"a0e8cb","enabled":false},{"externalId":"2d0a3a","enabled":false},{"externalId":"jhvuh9","enabled":true},{"externalId":"a0b7a2","enabled":false},{"externalId":"cd4bcd","enabled":true},{"externalId":"a6ce0e","enabled":true},{"externalId":"8c00d9","enabled":true},{"externalId":"b17b07","enabled":true},{"externalId":"f5955e","enabled":true},{"externalId":"j3wl59","enabled":true},{"externalId":"f61526","enabled":true},{"externalId":"dc62cd","enabled":true},{"externalId":"itn123","enabled":true},{"externalId":"9c15c6","enabled":true},{"externalId":"fae3d8","enabled":true},{"externalId":"bd5175","enabled":true},{"externalId":"ff46a7","enabled":true},{"externalId":"a7xa11","enabled":true},{"externalId":"ff46a8","enabled":true},{"externalId":"y49JQ4","enabled":true},{"externalId":"1520dc","enabled":true},{"externalId":"02f05d","enabled":true},{"externalId":"1D707C","enabled":true},{"externalId":"3c6745","enabled":true},{"externalId":"409952","enabled":true},{"externalId":"594946","enabled":true},{"externalId":"155d0f","enabled":true},{"externalId":"64b2b6","enabled":true},{"externalId":"91af80","enabled":true},{"externalId":"93b8ef","enabled":false},{"externalId":"u4f8Se","enabled":false},{"externalId":"f91a80","enabled":true},{"externalId":"ba2244","enabled":true},{"externalId":"49e3af","enabled":true},{"externalId":"e60d7e","enabled":true},{"externalId":"8473fh","enabled":true},{"externalId":"B0771E","enabled":true},{"externalId":"5d6f6f","enabled":true},{"externalId":"fc8686","enabled":false},{"externalId":"44570e","enabled":true},{"externalId":"f37f25","enabled":true},{"externalId":"f7998c","enabled":false},{"externalId":"4dfb50","enabled":false},{"externalId":"c1m2k3","enabled":true},{"externalId":"ca4a11","enabled":true},{"externalId":"819f33","enabled":true},{"externalId":"14e207","enabled":true},{"externalId":"c92430","enabled":false},{"externalId":"43425v","enabled":true},{"externalId":"88g2g4","enabled":true},{"externalId":"b1b264","enabled":true},{"externalId":"3c20f4","enabled":true},{"externalId":"04a4be","enabled":true},{"externalId":"0f31ff","enabled":true},{"externalId":"9aa0ab","enabled":true},{"externalId":"b573ff","enabled":true},{"externalId":"714a2c","enabled":true},{"externalId":"0283d8","enabled":true},{"externalId":"a32e1f","enabled":false},{"externalId":"ca2fc9","enabled":true},{"externalId":"123abc","enabled":true},{"externalId":"55a005","enabled":true},{"externalId":"9ffdbf","enabled":true},{"externalId":"3828df","enabled":true},{"externalId":"728861","enabled":true},{"externalId":"4e8c8c","enabled":false},{"externalId":"890fa3","enabled":true},{"externalId":"0e3f2b","enabled":true},{"externalId":"392203","enabled":true},{"externalId":"4909f4","enabled":true},{"externalId":"ae12dc","enabled":true},{"externalId":"946BAD","enabled":true},{"externalId":"c228fc","enabled":true},{"externalId":"E48EB3","enabled":true},{"externalId":"0fcbc9","enabled":true},{"externalId":"89h23f","enabled":true},{"externalId":"e41cb0","enabled":true},{"externalId":"D59304","enabled":true},{"externalId":"349404","enabled":false},{"externalId":"c7271e","enabled":true},{"externalId":"1a3095","enabled":true},{"externalId":"1605dc","enabled":true},{"externalId":"9f7d50","enabled":true},{"externalId":"jfs876","enabled":true},{"externalId":"f7e99d","enabled":true},{"externalId":"d7a65a","enabled":false},{"externalId":"zjh321","enabled":true},{"externalId":"ksh830","enabled":false},{"externalId":"582d83","enabled":true},{"externalId":"539a8","enabled":true},{"externalId":"af98ks","enabled":true},{"externalId":"37bb67","enabled":true},{"externalId":"850b74","enabled":false},{"externalId":"b5bfa9","enabled":true},{"externalId":"47edc5","enabled":true},{"externalId":"522cs1","enabled":true},{"externalId":"166e45","enabled":true},{"externalId":"7b3cce","enabled":false},{"externalId":"608pb3","enabled":true},{"externalId":"csBG90","enabled":false},{"externalId":"0347eb","enabled":true},{"externalId":"3011a1","enabled":true},{"externalId":"y29kzw","enabled":true},{"externalId":"0b1765","enabled":true},{"externalId":"e33911","enabled":true},{"externalId":"f5e8b4","enabled":true},{"externalId":"75ffcf","enabled":true},{"externalId":"d7715f","enabled":true},{"externalId":"6088cb","enabled":true},{"externalId":"fc47af","enabled":true},{"externalId":"76f4d7","enabled":true},{"externalId":"5ca3e5","enabled":false},{"externalId":"002711","enabled":true},{"externalId":"7213c8","enabled":false},{"externalId":"94ed93","enabled":true},{"externalId":"0140c7","enabled":false},{"externalId":"de2505","enabled":true},{"externalId":"kFzJtT","enabled":true},{"externalId":"c10nd6","enabled":true},{"externalId":"783666","enabled":false},{"externalId":"EF5BF0","enabled":false},{"externalId":"08683f","enabled":true},{"externalId":"894768","enabled":false},{"externalId":"c00b74","enabled":true},{"externalId":"d37f23","enabled":true},{"externalId":"o23j53","enabled":true},{"externalId":"231kb4","enabled":true},{"externalId":"8529be","enabled":false},{"externalId":"a15582","enabled":true},{"externalId":"e83hb9","enabled":true},{"externalId":"gwTg5A","enabled":false},{"externalId":"67a7a","enabled":true},{"externalId":"f498a0","enabled":false},{"externalId":"ca3644","enabled":true}]' />
+
+
+
+
+
+
+    
+        <script src="https://d3h0qgp8iy04se.cloudfront.net/1754571321998/index.en.js" type="text/javascript" charset="utf-8" defer=""></script>
+    
+
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+
+    
+        <meta content="IE=edge" />
+    
+
+    
+        <meta name="roc_cdn_fleet" content="https://d3h0qgp8iy04se.cloudfront.net" />
+    
+
+    
+        <meta name="roc_cdn_onebox" content="https://d3b5rgwsca96hk.cloudfront.net" />
+    
+
+    
+        <meta name="roc_cdn_default" content="https://d3h0qgp8iy04se.cloudfront.net" />
+    
+
+    
+        <meta id="regionOverride" name="regionOverride" content="us-east-1" />
+    
+
+    
+        <meta name="roc_partition_home_region" content="us-east-1" />
+    
+
+    
+        <meta name="roc_partition" content="aws" />
+    
+
+    
+        <meta id="airportCode" name="airportCode" content="iad" />
+    
+
+    
+        <meta id="docsUrl" name="docsUrl" content="https://docs.aws.amazon.com" />
+    
+
+    
+        <meta value="{&quot;codestar&quot;:1,&quot;codecommit&quot;:1,&quot;codebuild&quot;:1,&quot;codedeploy&quot;:1,&quot;codepipeline&quot;:1,&quot;codeartifact&quot;:1}" name="subconsoles" />
+    
+
+    
+        <meta value="{}" name="canary" />
+    
+
+    
+        <meta value="{&quot;autoscaling&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;appconfig&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;cloud9&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;],&quot;cloudformation&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;cloudtrail&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;codeartifact&quot;:[&quot;eu-north-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;codebuild&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;codecommit&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;us-east-2&quot;,&quot;eu-west-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;eu-west-2&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;ca-central-1&quot;],&quot;codedeploy&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;codepipeline&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;devicefarm&quot;:[&quot;us-west-2&quot;],&quot;ec2&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;ecr&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;ecs&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;eks&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;elasticbeanstalk&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;],&quot;elasticfilesystem&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;elasticloadbalancing&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;events&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;iam&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;kms&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;lambda&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;states&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;logs&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;monitoring&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;opsworks&quot;:[&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;us-east-2&quot;,&quot;eu-west-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;eu-west-2&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;ca-central-1&quot;],&quot;s3&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;servicecatalog&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;sns&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;ssm&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;],&quot;tagging&quot;:[&quot;eu-north-1&quot;,&quot;me-south-1&quot;,&quot;ap-south-1&quot;,&quot;eu-west-3&quot;,&quot;ap-southeast-3&quot;,&quot;us-east-2&quot;,&quot;af-south-1&quot;,&quot;eu-west-1&quot;,&quot;me-central-1&quot;,&quot;eu-central-1&quot;,&quot;sa-east-1&quot;,&quot;ap-east-1&quot;,&quot;ap-south-2&quot;,&quot;us-east-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-northeast-3&quot;,&quot;eu-west-2&quot;,&quot;ap-southeast-4&quot;,&quot;eu-south-1&quot;,&quot;ap-northeast-1&quot;,&quot;us-west-2&quot;,&quot;us-west-1&quot;,&quot;ap-southeast-1&quot;,&quot;ap-southeast-2&quot;,&quot;il-central-1&quot;,&quot;ca-central-1&quot;,&quot;ca-west-1&quot;,&quot;eu-south-2&quot;,&quot;eu-central-2&quot;]}" name="service_regions" />
+    
+
+    
+        <meta name="img_proxy" content="https://d333wbbc2ws2t9.cloudfront.net" />
+    
+
+
+</head>
+<body spellcheck="false">
+  <div id="b">
+    <div id="h" ng-non-bindable>
+
+
+    
+<div id="consoleNavHeader" style=""><div id="skeleton-nav-awt-wrapper" data-testid="skeleton-nav-default-awt-wrapper">
+<div class="skeleton-nav-awt-loader">
+  <div class="aws-logo-wrapper">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="2.0"
+      focusable="false"
+      aria-hidden="true"
+      class="aws-logo"
+      viewBox="0 0 29 17"
+    >
+      <path
+        class="aws-logo__letters"
+        d="M8.38 6.17a2.6 2.6 0 00.11.83c.08.232.18.456.3.67a.4.4 0 01.07.21.36.36 0 01-.18.28l-.59.39a.43.43 0 01-.24.08.38.38 0 01-.28-.13 2.38 2.38 0 01-.34-.43c-.09-.16-.18-.34-.28-.55a3.44 3.44 0 01-2.74 1.29 2.54 2.54 0 01-1.86-.67 2.36 2.36 0 01-.68-1.79 2.43 2.43 0 01.84-1.92 3.43 3.43 0 012.29-.72 6.75 6.75 0 011 .07c.35.05.7.12 1.07.2V3.3a2.06 2.06 0 00-.44-1.49 2.12 2.12 0 00-1.52-.43 4.4 4.4 0 00-1 .12 6.85 6.85 0 00-1 .32l-.33.12h-.14c-.14 0-.2-.1-.2-.29v-.46A.62.62 0 012.3.87a.78.78 0 01.27-.2A6 6 0 013.74.25 5.7 5.7 0 015.19.07a3.37 3.37 0 012.44.76 3 3 0 01.77 2.29l-.02 3.05zM4.6 7.59a3 3 0 001-.17 2 2 0 00.88-.6 1.36 1.36 0 00.32-.59 3.18 3.18 0 00.09-.81V5A7.52 7.52 0 006 4.87h-.88a2.13 2.13 0 00-1.38.37 1.3 1.3 0 00-.46 1.08 1.3 1.3 0 00.34 1c.278.216.63.313.98.27zm7.49 1a.56.56 0 01-.36-.09.73.73 0 01-.2-.37L9.35.93a1.39 1.39 0 01-.08-.38c0-.15.07-.23.22-.23h.92a.56.56 0 01.36.09.74.74 0 01.19.37L12.53 7 14 .79a.61.61 0 01.18-.37.59.59 0 01.37-.09h.75a.62.62 0 01.38.09.74.74 0 01.18.37L17.31 7 18.92.76a.74.74 0 01.19-.37.56.56 0 01.36-.09h.87a.21.21 0 01.23.23 1 1 0 010 .15s0 .13-.06.23l-2.26 7.2a.74.74 0 01-.19.37.6.6 0 01-.36.09h-.8a.53.53 0 01-.37-.1.64.64 0 01-.18-.37l-1.45-6-1.44 6a.64.64 0 01-.18.37.55.55 0 01-.37.1l-.82.02zm12 .24a6.29 6.29 0 01-1.44-.16 4.21 4.21 0 01-1.07-.37.69.69 0 01-.29-.26.66.66 0 01-.06-.27V7.3c0-.19.07-.29.21-.29a.57.57 0 01.18 0l.23.1c.32.143.656.25 1 .32.365.08.737.12 1.11.12a2.47 2.47 0 001.36-.31 1 1 0 00.48-.88.88.88 0 00-.25-.65 2.29 2.29 0 00-.94-.49l-1.35-.43a2.83 2.83 0 01-1.49-.94 2.24 2.24 0 01-.47-1.36 2 2 0 01.25-1c.167-.3.395-.563.67-.77a3 3 0 011-.48A4.1 4.1 0 0124.4.08a4.4 4.4 0 01.62 0l.61.1.53.15.39.16c.105.062.2.14.28.23a.57.57 0 01.08.31v.44c0 .2-.07.3-.21.3a.92.92 0 01-.36-.12 4.35 4.35 0 00-1.8-.36 2.51 2.51 0 00-1.24.26.92.92 0 00-.44.84c0 .249.1.488.28.66.295.236.635.41 1 .51l1.32.42a2.88 2.88 0 011.44.9 2.1 2.1 0 01.43 1.31 2.38 2.38 0 01-.24 1.08 2.34 2.34 0 01-.68.82 3 3 0 01-1 .53 4.59 4.59 0 01-1.35.22l.03-.01z"
+      ></path>
+      <path
+        class="aws-logo__smile"
+        d="M25.82 13.43a20.07 20.07 0 01-11.35 3.47A20.54 20.54 0 01.61 11.62c-.29-.26 0-.62.32-.42a27.81 27.81 0 0013.86 3.68 27.54 27.54 0 0010.58-2.16c.52-.22.96.34.45.71z"
+      ></path>
+      <path
+        class="aws-logo__smile"
+        d="M27.1 12c-.4-.51-2.6-.24-3.59-.12-.3 0-.34-.23-.07-.42 1.75-1.23 4.63-.88 5-.46.37.42-.09 3.3-1.74 4.68-.25.21-.49.09-.38-.18.34-.95 1.17-3.02.78-3.5z"
+      ></path>
+    </svg>
+  </div>
+</div>
+<style id="skeleton-nav-awt-style">
+  .skeleton-nav-awt-loader .aws-logo {
+    display: block;
+    width: 33px;
+    height: 19px;
+    position: relative;
+  }
+
+  .skeleton-nav-awt-loader .aws-logo-wrapper {
+    position: relative;
+    padding: 9px 17px;
+  }
+
+  .skeleton-nav-awt-loader .aws-logo__letters {
+    fill: #ffffff;
+  }
+
+  .skeleton-nav-awt-loader .aws-logo__smile {
+    fill: #ffffff;
+    fill-rule: evenodd;
+  }
+
+  .skeleton-nav-awt-loader {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #161d26;
+    border-bottom: 1px solid rgb(84, 91, 100);
+  }
+</style>
+</div></div>
+
+</div>
+<div id="cc">
+  <div id="c">
+
+
+
+<div id="app"></div>
+
+</div>
+</div>
+<div id="f" role="contentinfo" ng-non-bindable>
+
+
+
+    <div id="footer">
+</div>
+<div id="console-nav-footer" style="">
+    <div id="footer-content">
+    </div>
+</div>
+
+
+</div>
+</div>
+
+<script data-platform-asset="panorama" id="awsc-panorama-bundle" type="text/javascript" crossorigin="anonymous" src="https://a.b.cdn.console.awsstatic.com/a/v1/RATYPM57SUYHXFOX62K7ZBBCDHOEXJ7W6A3XUIXIERLMMUA3LEXA/init/cd27a3ebeab94921b897893168db1b0fc8d3f3dfada140bb8d0cc6ebbe6a1aad.js" data-url="https://a.b.cdn.console.awsstatic.com/a/v1/RATYPM57SUYHXFOX62K7ZBBCDHOEXJ7W6A3XUIXIERLMMUA3LEXA/b05c359d359a431c9197105f7024a985f7f4e1b7d2c14770bf71961ab0a432de.js"></script>
+<script data-platform-asset="telemetry-broker" type="text/javascript" src="https://a.b.cdn.console.awsstatic.com/a/v1/XLQEN45V45ZOOGIBUDHP5DXBXU6SJ2BZAKL2G75LYNPZS2M7BPFQ/index.js"></script>
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+</body>
+</html>
+
