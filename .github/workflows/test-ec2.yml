@@ -1,0 +1,8 @@
+name: test-ec2
+on: [push]
+jobs:
+  test:
+    runs-on:
+      - codebuild-github-runner-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - run: echo "hello from ec2"
