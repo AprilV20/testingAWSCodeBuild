@@ -1,0 +1,11 @@
+name: test-lambda
+on: [push]
+jobs:
+  test:
+    runs-on:
+      - codebuild-github-runner-lambda-${{ github.run_id }}-${{ github.run_attempt }}
+      - image:linux-lambda-nodejs22
+      - instance-size:1GB
+    steps:
+      - run: echo "hello from lambda"
+
